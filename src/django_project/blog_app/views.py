@@ -23,7 +23,9 @@ def post_detail(request, post_slug):
     <p>Автор: {post.author.username}</p>
     <div>{post.content}</div>
     <hr>
-    <a href="/post_list/">Назад к статьям</a>
+    <a href="/post_list/">Назад ко всем статьям</a>
+    <hr>
+    <a href = "/categories/{post.category.id}/">Назад к статьям категории</a>
     '''
     return HttpResponse(content)
 
