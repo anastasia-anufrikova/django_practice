@@ -1,11 +1,17 @@
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 
 from django_project.blog_app.models import Post, Category
 
 
 def index(request):
-    return HttpResponse('<h1>Мой блог</h1>')
+    posts = Post.objects.filter(published=True).order_by("-created_at")[:5]
+
+    context = {
+        "posts": posts
+    }
+
+    return render(request, "blog_app/index.html", context=context)
 
 def post_list(request):
     posts = Post.objects.filter(published=True)
@@ -18,16 +24,10 @@ def post_list(request):
 
 def post_detail(request, post_slug):
     post = get_object_or_404(Post, slug=post_slug)
-    content = f'''
-    <h1>{post.title}</h1>
-    <p>Автор: {post.author.username}</p>
-    <div>{post.content}</div>
-    <hr>
-    <a href="/post_list/">Назад ко всем статьям</a>
-    <hr>
-    <a href = "/categories/{post.category.id}/">Назад к статьям категории</a>
-    '''
-    return HttpResponse(content)
+    context = {
+        "post": post
+    }
+    return render(request, "blog_app/post_detail.html", context=context)
 
 def categories_list(request):
     all_categories = Category.objects.all()
@@ -40,9 +40,14 @@ def categories_list(request):
 def category_detail(request, category_id):
     category = get_object_or_404(Category, pk=category_id)
     posts_category = Post.objects.filter(category=category, published=True)
-    content = f'<h1>{category.title}</h1><ul>'
-    for post in posts_category:
-        content +=  f'<li><a href="/post/{post.slug}/">{post.title}</a></li>'
-    content += '</ul>'
-    content += '<a href = "/categories/">Назад к списку категорий</a>'
+    if posts_category:
+        content = f'<h1>{category.title}</h1><ul>'
+        for post in posts_category:
+            content +=  f'<li><a href="/post/{post.slug}/">{post.title}</a></li>'
+        content += '</ul>'
+    else:
+        content = f'''<h1>{category.title}</h1>
+                  <p>Статей пока нет</p>
+                  '''
+    content += '<hr><a href = "/categories/">Назад к списку категорий</a>'
     return HttpResponse(content)
