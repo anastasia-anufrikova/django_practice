@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} {{ page_title }} {% endblock %}
+
+{% block content %}
+<h1>{{ page_title }}</h1>
+    <div class="list-group">
+        {% for category in categories %}
+            <a href="{% url 'blog:category_detail' category.id %}" class="list-group-item list-group-item-action">
+                {{ category.title }}
+            </a>
+        {% empty %}
+        <p>Здесь пока ничего нет</p>
+        {%  endfor %}
+    </div>
+{% endblock %}
