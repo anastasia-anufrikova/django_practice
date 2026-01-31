@@ -1,6 +1,8 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 
+from django_project.blog_app.forms import PostForm
 from django_project.blog_app.models import Post, Category
+import time
 
 
 def index(request):
@@ -43,3 +45,20 @@ def category_detail(request, category_id):
         "page_title": "Статьи категории"
     }
     return render(request, "blog_app/post_list.html", context=context)
+
+def post_create(request):
+    if request.method == "POST":
+        form = PostForm(request.POST)
+
+        if form.is_valid():
+            new_post = form.save(commit=False)
+            new_post.slug = f"post-{int(time.time())}"
+            new_post.save()
+            return redirect("blog:post_detail", new_post.slug)
+    else:
+        form = PostForm()
+
+    context = {
+        "form": form,
+    }
+    return render(request, "blog_app/create_post.html", context=context)
