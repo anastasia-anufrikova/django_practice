@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render, redirect
 
-from django_project.blog_app.forms import PostForm
+from django_project.blog_app.forms import PostForm, CategoryForm
 from django_project.blog_app.models import Post, Category
 import time
 
@@ -61,4 +61,40 @@ def post_create(request):
     context = {
         "form": form,
     }
+    return render(request, "blog_app/create_post.html", context=context)
+
+def category_create(request):
+    if request.method == "POST":
+        form = CategoryForm(request.POST)
+
+        if form.is_valid():
+            new_category = form.save(commit=False)
+            new_category.slug = f"post-{int(time.time())}"
+            new_category.save()
+            return redirect("blog:category_detail", category_id=new_category.id)
+    else:
+        form = CategoryForm()
+
+    context = {
+        "form": form,
+    }
+    return render(request, "blog_app/create_category.html", context=context)
+
+def post_edit(request, id):
+    post = get_object_or_404(Post, id=id)
+
+    if request.method == "POST":
+        form = PostForm(request.POST, instance=post)
+        if form.is_valid():
+            edited_post = form.save(commit=False)
+            edited_post.save()
+            return redirect("blog:post_detail", edited_post.slug)
+    else:
+        form = PostForm(instance=post)
+
+    context = {
+        "form": form,
+        "is_edit": True,
+    }
+
     return render(request, "blog_app/create_post.html", context=context)

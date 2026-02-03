@@ -9,4 +9,6 @@ urlpatterns = [
     path('categories/', views.categories_list, name='categories'),
     path('categories/<int:category_id>/', views.category_detail, name='category_detail'),
     path('create_post/', views.post_create, name='create_post'),
+    path('category/create/', views.category_create, name='create_category'),
+    path('post/<int:id>/edit/', views.post_edit, name='post_edit'),
     ]

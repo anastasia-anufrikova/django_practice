@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Category(models.Model):
-    title = models.CharField(max_length=100, verbose_name='Название')
+    title = models.CharField(max_length=100, verbose_name='Название', unique=True)
     slug = models.SlugField(unique=True)
 
     class Meta:
