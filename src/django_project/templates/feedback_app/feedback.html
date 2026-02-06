@@ -3,14 +3,14 @@
 {% block title %}Обратная связь{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-  <div class="col-md-8">
-    <h1 class="mb-4">Обратная связь</h1>
+<div class="card mx-auto" style="width: 18rem;">
+  <div class="card-body">
+    <h2 class="card-title">Обратная связь</h2>
 
     <form action="" method="post">
       {% csrf_token %}
       {% for field in form %}
-        <div class="mb-3">
+        <div class="card-text">
           <label class="form-label">{{ field.label }}</label>
           {{ field }}
           {% if field.errors %}
@@ -18,7 +18,7 @@
           {% endif %}
         </div>
       {% endfor %}
-
+      <br>
       <button type="submit" class="btn btn-primary">Отправить сообщение</button>
 
     </form>
