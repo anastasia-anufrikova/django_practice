@@ -14,8 +14,11 @@ def feedback_page(request):
                 **data
             )
 
-            return redirect("blog:index")
+            return redirect("feedback:success")
     else:
         form = FeedbackForm()
 
     return render(request, "feedback_app/feedback.html", context={"form": form})
+
+def success_page(request):
+    return render(request, "feedback_app/success.html")
