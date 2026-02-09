@@ -1,5 +1,5 @@
-from django.shortcuts import get_object_or_404, render, redirect
-from django.views.generic import TemplateView, ListView, DetailView, CreateView
+from django.urls import reverse
+from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from django_project.blog_app.forms import PostForm, CategoryForm
 from django_project.blog_app.models import Post, Category
@@ -34,39 +34,41 @@ class PostDetailView(DetailView):
     context_object_name = "post"
     slug_url_kwarg ="post_slug"
 
-def categories_list(request):
-    categories = Category.objects.all()
-    context = {
-        "categories": categories,
-        "page_title": "Список категорий"
-    }
-    return render(request, "blog_app/categories_list.html", context=context)
+class CategoriesListView(ListView):
+    model = Category
+    template_name = "blog_app/categories_list.html"
+    context_object_name = "categories"
 
-def category_detail(request, category_id):
-    category = get_object_or_404(Category, pk=category_id)
-    posts = Post.objects.filter(category=category, published=True)
-    context = {
-        "posts": posts,
-        "page_title": "Статьи категории"
-    }
-    return render(request, "blog_app/post_list.html", context=context)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["page_title"] = "Список категорий"
+        return context
 
-def post_create(request):
-    if request.method == "POST":
-        form = PostForm(request.POST)
+class CategoryDetailView(ListView):
+    model = Post
+    template_name = "blog_app/post_list.html"
+    context_object_name = "posts"
 
-        if form.is_valid():
-            new_post = form.save(commit=False)
-            new_post.slug = f"post-{int(time.time())}"
-            new_post.save()
-            return redirect("blog:post_detail", new_post.slug)
-    else:
-        form = PostForm()
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["page_title"] = "Статьи категории"
+        return context
 
-    context = {
-        "form": form,
-    }
-    return render(request, "blog_app/create_post.html", context=context)
+    def get_queryset(self):
+        id_param = self.kwargs['category_id']
+        return self.model.objects.filter(category=id_param,published=True)
+
+class PostCreateView(CreateView):
+    model = Post
+    form_class = PostForm
+    template_name = "blog_app/create_post.html"
+
+    def form_valid(self, form):
+        form.instance.slug = f"post-{int(time.time())}"
+        return super().form_valid(form)
+
+    def get_success_url(self):
+        return reverse("blog:post_detail", kwargs={"post_slug": self.object.slug})
 
 class CategoryCreateView(CreateView):
     model = Category
@@ -77,21 +79,21 @@ class CategoryCreateView(CreateView):
         form.instance.slug = f"post-{int(time.time())}"
         return super().form_valid(form)
 
-def post_edit(request, id):
-    post = get_object_or_404(Post, id=id)
+class PostUpdateView(UpdateView):
+    model = Post
+    form_class = PostForm
+    template_name = "blog_app/create_post.html"
 
-    if request.method == "POST":
-        form = PostForm(request.POST, instance=post)
-        if form.is_valid():
-            edited_post = form.save(commit=False)
-            edited_post.save()
-            return redirect("blog:post_detail", edited_post.slug)
-    else:
-        form = PostForm(instance=post)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["is_edit"] = True
+        return context
 
-    context = {
-        "form": form,
-        "is_edit": True,
-    }
+    def get_success_url(self):
+        return reverse("blog:post_detail", kwargs={"post_slug": self.object.slug})
 
-    return render(request, "blog_app/create_post.html", context=context)
+class PostDeleteView(DeleteView):
+    model = Post
+
+    def get_success_url(self):
+        return reverse("blog:post_list")
