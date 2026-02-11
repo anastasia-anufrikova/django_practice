@@ -19,15 +19,17 @@
         <p>Здесь пока ничего нет</p>
         {%  endfor %}
 
+        <div class="mt-4">
         {% if page_obj.has_previous %}
-            <a href="?page={{ page_obj.previous_page_number }}">Назад</a>
+            <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-secondary">Назад</a>
         {% endif %}
 
         Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
 
         {% if page_obj.has_next %}
-            <a href="?page={{ page_obj.next_page_number }}">Вперёд</a>
+            <a href="?page={{ page_obj.next_page_number }}" class="btn btn-secondary"" aria-pressed="true">Вперёд</a>
         {% endif %}
+        </div>
 
     </div>
 {% endblock %}
