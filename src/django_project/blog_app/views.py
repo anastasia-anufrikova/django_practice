@@ -2,12 +2,14 @@ from django.urls import reverse
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from django_project.blog_app.forms import PostForm, CategoryForm
+from django_project.blog_app.mixins import TitleMixin, StuffRequiredMixin
 from django_project.blog_app.models import Post, Category
 import time
 
 
-class IndexView(TemplateView):
+class IndexView(TitleMixin ,TemplateView):
     template_name = "blog_app/index.html"
+    title = 'Главная страница'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -58,13 +60,14 @@ class CategoryDetailView(ListView):
         id_param = self.kwargs['category_id']
         return self.model.objects.filter(category=id_param,published=True)
 
-class PostCreateView(CreateView):
+class PostCreateView(StuffRequiredMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = "blog_app/create_post.html"
 
     def form_valid(self, form):
         form.instance.slug = f"post-{int(time.time())}"
+        form.instance.author = self.request.user
         return super().form_valid(form)
 
     def get_success_url(self):
