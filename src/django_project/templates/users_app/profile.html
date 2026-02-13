@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {% if is_edit %}Редактирование профиля{% else %}Профиль пользователя{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if is_edit %}
+  <h1>Редактировать мой профиль</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+      <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+      <a href="{% url 'users:profile_view' %}" class="btn btn-secondary">Отмена</a>
+  </form>
+{% else %}
+  <h1>Профиль пользователя: {{ profile.user.username }}</h1>
+
+  <div class="post-content">
+    <p><strong>О себе:</strong> {{ profile.bio }}</p>
+  </div>
+
+  <div class="mt-4">
+      {% if profile.social_link %}
+          <a href="{{ profile.social_link }}" class="btn btn-outline-primary">Перейти на сайт</a>
+      {% else %}
+          <span>Ссылка не указана</span>
+      {% endif %}
+  </div>
+
+  <div class="mt-4">
+    <a href="{% url 'users:profile_edit' %}" class="btn btn-warning">Редактировать профиль</a>
+  </div>
+{% endif %}
+{% endblock %}
