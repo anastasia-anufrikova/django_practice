@@ -9,15 +9,11 @@ class ProfileView(DetailView):
     context_object_name = "profile"
 
     def get_object(self, queryset=None):
-        return self.request.user.profile
+        profile, created = Profile.objects.get_or_create(user=self.request.user)
+        return profile
 
-class ProfileUpdateView(UpdateView):
-    model = Profile
+class ProfileUpdateView(ProfileView, UpdateView):
     form_class = ProfileForm
-    template_name = "users_app/profile.html"
-
-    def get_object(self, queryset=None):
-        return self.request.user.profile
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
