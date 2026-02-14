@@ -1,4 +1,6 @@
 from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 from .models import Profile
 
 class ProfileForm(forms.ModelForm):
@@ -18,3 +20,47 @@ class ProfileForm(forms.ModelForm):
                 'placeholder': 'https://example.com',
             }),
         }
+
+class CustomCreationForm(UserCreationForm):
+    password1 = forms.CharField(
+        label='Пароль',
+        widget=forms.PasswordInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Придумайте пароль',
+                'autocomplete': 'New-password',
+            }),
+    )
+
+    password2 = forms.CharField(
+        label='Пароль',
+        widget=forms.PasswordInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Подтвердите пароль',
+                'autocomplete': 'New-password',
+            }),
+    )
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+        widgets = {
+            'username': forms.TextInput(
+                attrs={
+                    'class': 'form-control',
+                    'placeholder': 'Введите никнейм',
+                    'autocomplete': 'Username'
+                }
+            ),
+
+            'email': forms.EmailInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Введите ваш email',
+                'autocomplete': 'Email'
+            }),
+        }
+
+    def clean_email(self):
+        email = self.cleaned_data['email'].strip().lower()
+        if User.objects.filter(email__iexact=email).exists():
+            raise forms.ValidationError('Пользователь с таким email уже зарегистрирован')
+        return email
