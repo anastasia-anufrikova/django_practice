@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 
 from pathlib import Path
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -127,3 +128,6 @@ JAZZMIN_SETTINGS = {
 "usermenu_links": [
         {"model": "auth.user"}
     ],}
+
+LOGIN_REDIRECT_URL = 'users:profile_view'
+LOGOUT_REDIRECT_URL = 'blog:index'

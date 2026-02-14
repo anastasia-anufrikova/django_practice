@@ -1,7 +1,8 @@
-from django.views.generic import DetailView, UpdateView
-from .forms import ProfileForm
+from django.views.generic import DetailView, UpdateView, CreateView
+from .forms import ProfileForm, CustomCreationForm
 from .models import Profile
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+
 
 class ProfileView(DetailView):
     model = Profile
@@ -22,3 +23,8 @@ class ProfileUpdateView(ProfileView, UpdateView):
 
     def get_success_url(self):
         return reverse("users:profile_view")
+
+class RegistrationView(CreateView):
+    form_class = CustomCreationForm
+    template_name = 'users_app/register.html'
+    success_url = reverse_lazy('users:register')
