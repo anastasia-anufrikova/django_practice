@@ -128,6 +128,6 @@ JAZZMIN_SETTINGS = {
 "usermenu_links": [
         {"model": "auth.user"}
     ],}
-
 LOGIN_REDIRECT_URL = 'users:profile_view'
 LOGOUT_REDIRECT_URL = 'blog:index'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

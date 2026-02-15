@@ -1,5 +1,6 @@
+from django.contrib.auth.views import LoginView, PasswordChangeView
 from django.views.generic import DetailView, UpdateView, CreateView
-from .forms import ProfileForm, CustomCreationForm
+from .forms import ProfileForm, CustomCreationForm, CustomLoginForm, CustomPasswordChangeForm
 from .models import Profile
 from django.urls import reverse, reverse_lazy
 
@@ -28,3 +29,12 @@ class RegistrationView(CreateView):
     form_class = CustomCreationForm
     template_name = 'users_app/register.html'
     success_url = reverse_lazy('users:register')
+
+class CustomLoginView(LoginView):
+    form_class = CustomLoginForm
+    template_name = 'users_app/login.html'
+
+class CustomPasswordChangeView(PasswordChangeView):
+    form_class = CustomPasswordChangeForm
+    template_name = 'users_app/password_change.html'
+    success_url = reverse_lazy('users:password_change_done')

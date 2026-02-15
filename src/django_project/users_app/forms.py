@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from .models import Profile
 
@@ -64,3 +64,34 @@ class CustomCreationForm(UserCreationForm):
         if User.objects.filter(email__iexact=email).exists():
             raise forms.ValidationError('Пользователь с таким email уже зарегистрирован')
         return email
+
+class CustomLoginForm(AuthenticationForm):
+    username = forms.CharField(widget=forms.TextInput(
+        attrs={
+            'class': 'form-control',
+            'placeholder': 'Введите ваш никнейм',
+            'autocomplete': 'Username'
+        })
+    )
+
+    password = forms.CharField(widget=forms.PasswordInput(
+        attrs={
+            'class': 'form-control',
+            'placeholder': 'Введите пароль',
+            'autocomplete': 'current-password',
+        })
+    )
+
+class CustomPasswordChangeForm(PasswordChangeForm):
+    old_password = forms.CharField(widget=forms.PasswordInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Введите пароль',
+            'autocomplete': 'current-password',}))
+    new_password1 = forms.CharField(widget=forms.PasswordInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Введите пароль',
+            'autocomplete': 'new-password',}))
+    new_password2 = forms.CharField(widget=forms.PasswordInput(attrs={
+            'class': 'form-control',
+            'placeholder': 'Введите пароль',
+            'autocomplete': 'new-password',}))
