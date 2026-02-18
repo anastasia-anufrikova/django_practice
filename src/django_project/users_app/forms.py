@@ -6,7 +6,7 @@ from .models import Profile
 class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ['bio', 'social_link']
+        fields = ['bio', 'social_link', 'avatar']
         widgets = {
             'bio': forms.Textarea(
                 attrs={
@@ -19,6 +19,11 @@ class ProfileForm(forms.ModelForm):
                 'class': 'form-control',
                 'placeholder': 'https://example.com',
             }),
+            'avatar': forms.ClearableFileInput(
+                attrs={
+                    'class': 'form-control'
+                }
+            ),
         }
 
 class CustomCreationForm(UserCreationForm):

@@ -1,6 +1,5 @@
 from django.http import HttpResponseForbidden
 
-
 class TitleMixin:
     title = None
 
