@@ -7,7 +7,7 @@
 {% block content %}
 {% if is_edit %}
   <h1>Редактировать мой профиль</h1>
-  <form method="post">
+  <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form.as_p }}
       <button type="submit" class="btn btn-primary">Сохранить изменения</button>
@@ -15,7 +15,9 @@
   </form>
 {% else %}
   <h1>Профиль пользователя: {{ profile.user.username }}</h1>
-
+  {% if profile.avatar %}
+      <img src="{{ profile.avatar.url }}" alt="Аватар {{ profile.user.username }}" class="rounded-circle mb-3" width="150px" height="150px">
+  {% endif %}
   <div class="post-content">
     <p><strong>О себе:</strong> {{ profile.bio }}</p>
   </div>
