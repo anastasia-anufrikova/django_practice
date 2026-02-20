@@ -4,6 +4,9 @@
 {% block content %}
 <article>
     <h1>{{post.title}}</h1>
+    {% if post.image %}
+        <img src="{{ post.image.url }}" alt="Обложка поста {{ post.title }}">
+    {% endif %}
     <p class="text-muted">
         Опубликовано: {{post.created_at|date:"d.m.Y H:i"}}<br>
         Автор: {{post.author}}

@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
+from PIL import Image
 
 class Category(models.Model):
     title = models.CharField(max_length=100, verbose_name='Название', unique=True)
@@ -26,6 +27,8 @@ class Post(models.Model):
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Обновлено')
     views_count = models.PositiveIntegerField(default=0, verbose_name='Количество просмотров')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True, verbose_name='Категория')
+    image = models.ImageField(upload_to='posts/', verbose_name='Обложка статьи', null=True, blank=True)
+
     def increase_views_count(self):
         self.views_count += 1
         self.save()
@@ -40,3 +43,11 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse("blog:post_detail", args=[self.slug])
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        if self.image:
+            img = Image.open(self.image.path)
+            if img.height > 1200 or img.width > 1200:
+                img.thumbnail((1200, 1200))
+                img.save(self.image.path)

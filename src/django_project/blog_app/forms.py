@@ -4,7 +4,7 @@ from django_project.blog_app.models import Post, Category
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['title', 'content', 'category']
+        fields = ['title', 'content', 'category', 'image']
         widgets = {
             'title': forms.TextInput(
                 attrs={
@@ -23,7 +23,12 @@ class PostForm(forms.ModelForm):
                     'placeholder': 'Введите содержимое статьи',
                     'rows': 5
                 }
-            )
+            ),
+            'image': forms.ClearableFileInput(
+                attrs={
+                    'class': 'form-control'
+                }
+            ),
         }
 
 class CategoryForm(forms.ModelForm):
