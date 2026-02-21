@@ -1,4 +1,5 @@
-from django.http import HttpResponseForbidden
+from django.shortcuts import redirect
+
 
 class TitleMixin:
     title = None
@@ -11,5 +12,5 @@ class TitleMixin:
 class StuffRequiredMixin:
     def dispatch(self, request, *args, **kwargs):
         if not request.user.is_authenticated or not request.user.is_staff:
-            return HttpResponseForbidden('У Вас нет прав')
+            return redirect('users:login')
         return super().dispatch(request, *args, **kwargs)
