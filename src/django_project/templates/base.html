@@ -47,8 +47,14 @@
             {% if user.is_authenticated %}
             <form action="{% url 'users:logout' %}" method="post">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-primary">Выйти</button>
+                <button type="submit" class="btn btn-primary me-2">Выйти</button>
             </form>
+            {% if user.profile.avatar %}
+                <img src="{{ user.profile.avatar.url }}" alt="Аватар {{ user.profile.user.username|first|upper }}" class="rounded-circle mb-3 mt-3" width="50px" height="50px">
+            {% else %}
+                <div class="rounded-circle bg-primary mb-3 mt-3 d-flex text-white align-items-center justify-content-center" style='width: 50px; height: 50px;'>{{ user.username|first|upper }}</div>
+            {% endif %}
+
             {% else %}
             <a href="{% url 'users:register'%}" class="btn btn-primary me-2">Зарегистрироваться</a>
             <a href="{% url 'users:login'%}" class="btn btn-primary">Войти</a>
@@ -63,7 +69,10 @@
 
     <footer class="py-3 my-4">
         <p class="text-center text-muted">Учебный Django-проект</p>
+        <p class="text-center text-muted">Количество постов: {{ total_posts }}</p>
+        <p class="text-center text-muted">Количество пользователей: {{total_users}}</p>
     </footer>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
 </html>
