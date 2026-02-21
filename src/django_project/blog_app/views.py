@@ -73,7 +73,7 @@ class PostCreateView(StuffRequiredMixin, CreateView):
     def get_success_url(self):
         return reverse("blog:post_detail", kwargs={"post_slug": self.object.slug})
 
-class CategoryCreateView(CreateView):
+class CategoryCreateView(StuffRequiredMixin, CreateView):
     model = Category
     form_class = CategoryForm
     template_name = "blog_app/create_category.html"

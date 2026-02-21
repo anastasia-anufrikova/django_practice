@@ -6,6 +6,7 @@ from PIL import Image
 class Category(models.Model):
     title = models.CharField(max_length=100, verbose_name='Название', unique=True)
     slug = models.SlugField(unique=True)
+    objects = models.Manager()
 
     class Meta:
         verbose_name='Категория'
@@ -28,6 +29,7 @@ class Post(models.Model):
     views_count = models.PositiveIntegerField(default=0, verbose_name='Количество просмотров')
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True, blank=True, verbose_name='Категория')
     image = models.ImageField(upload_to='posts/', verbose_name='Обложка статьи', null=True, blank=True)
+    objects = models.Manager()
 
     def increase_views_count(self):
         self.views_count += 1
