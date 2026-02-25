@@ -63,7 +63,7 @@ class CategoryViewTest(TestCase):
         self.post1 = Post.objects.create(title='post_1', slug='post_1', content='test_content',
                                         category=self.cat1, author=self.user, published=True)
         self.post2 = Post.objects.create(title='post_2', slug='post_2', content='test_content',
-                                         category=self.cat2, author=self.user, published=False)
+                                         category=self.cat2, author=self.user, published=True)
         response = self.client.get(reverse('blog:category_detail', kwargs={'category_id': self.cat1.id}))
         self.assertContains(response, self.post1.title)
         self.assertNotContains(response, self.post2.title)
