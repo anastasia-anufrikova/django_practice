@@ -26,3 +26,4 @@ class FeedbackViewTest(TestCase):
         response = self.client.post(reverse('feedback:feedback_page'), data=form_data)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(Feedback.objects.count(), 0)
+        self.assertIn("subject", response.context["form"].errors)
