@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from django.urls import reverse
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 
@@ -58,6 +59,7 @@ class CategoryDetailView(ListView):
 
     def get_queryset(self):
         id_param = self.kwargs['category_id']
+        get_object_or_404(Category, id=id_param)
         return self.model.objects.filter(category=id_param,published=True)
 
 class PostCreateView(StuffRequiredMixin, CreateView):

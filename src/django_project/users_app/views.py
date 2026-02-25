@@ -3,6 +3,7 @@ from django.views.generic import DetailView, UpdateView, CreateView
 from .forms import ProfileForm, CustomCreationForm, CustomLoginForm, CustomPasswordChangeForm
 from .models import Profile
 from django.urls import reverse, reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 
 class ProfileView(DetailView):
@@ -14,7 +15,7 @@ class ProfileView(DetailView):
         profile, created = Profile.objects.get_or_create(user=self.request.user)
         return profile
 
-class ProfileUpdateView(ProfileView, UpdateView):
+class ProfileUpdateView(LoginRequiredMixin, ProfileView, UpdateView):
     form_class = ProfileForm
 
     def get_context_data(self, **kwargs):

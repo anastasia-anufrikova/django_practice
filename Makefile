@@ -39,3 +39,6 @@ test:
 
 test_verbose:
 	uv run src/django_project/manage.py test -v 2
+
+test_users_app:
+	uv run src/django_project/manage.py test users_app
