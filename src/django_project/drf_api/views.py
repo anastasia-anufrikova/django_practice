@@ -1,7 +1,7 @@
 from rest_framework import generics
 
-from django_project.blog_app.models import Post
-from django_project.drf_api.serializers import PostSerializer
+from django_project.blog_app.models import Post, Category
+from django_project.drf_api.serializers import PostSerializer, CategorySerializer
 
 
 class PostListCreateAPIView(generics.ListCreateAPIView):
@@ -11,3 +11,11 @@ class PostListCreateAPIView(generics.ListCreateAPIView):
 class PostRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+
+class CategoryListCreateAPIView(generics.ListCreateAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+
+class CategoryRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
