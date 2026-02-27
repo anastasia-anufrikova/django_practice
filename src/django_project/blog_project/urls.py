@@ -23,7 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('blog_app.urls')),
     path('feedback/', include('feedback_app.urls')),
-    path('users/', include('users_app.urls'))
+    path('users/', include('users_app.urls')),
+    path('api/v1/', include('drf_api.urls'))
 
 ]
 
