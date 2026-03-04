@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'feedback_app',
     'django_project.users_app',
     'drf_api',
+    'ninja_api',
 ]
 
 MIDDLEWARE = [
