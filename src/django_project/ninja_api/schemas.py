@@ -33,7 +33,7 @@ class FeedbackOutSchema(FeedbackInSchema):
 class CategoryInSchema(ModelSchema):
     class Meta:
         model = Category
-        fields = ['title', 'slug']
+        fields = ['title']
 
 class CategoryOutSchema(ModelSchema):
     class Meta:

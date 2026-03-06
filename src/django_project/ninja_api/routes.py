@@ -63,14 +63,14 @@ async def category_get(request, category_id:int) -> CategoryOutSchema | HttpResp
 @router.post('/categories', response=CategoryOutSchema)
 async def create_category(request, payload: CategoryInSchema) -> CategoryOutSchema:
     data = payload.model_dump()
-    return await Category.objects.acreate(**data)
+    return await Category.objects.acreate(**data, slug=slugify(payload.title))
 
 @router.delete('/categories/{category_id}/')
-async def delete_category(request, category_id:int):
+async def delete_category(request, category_id:int) -> HttpResponse:
     try:
         category = await Category.objects.aget(pk=category_id)
         await category.adelete()
-        return f'Категория {category_id} успешно удалена'
+        return router.create_response(request, {'detail': f'Категория {category_id} успешно удалена'}, status=200)
 
     except Category.DoesNotExist:
         return router.create_response(request, {'detail': 'Категория не найдена'}, status=404)
