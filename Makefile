@@ -42,3 +42,27 @@ test_verbose:
 
 test_users_app:
 	uv run src/django_project/manage.py test users_app
+
+check:
+	uv run src/django_project/manage.py check
+
+dump:
+	uv run src/django_project/manage.py dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 4 --output fixtures/datadump.json
+
+restore:
+	uv run s loaddata fixtures/datadump.json
+
+create_db:
+	docker run --name blog_db -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypassword -e POSTGRES_DB=mydb -p 5432:5432 -v blog_db_data:/var/lib/postgresql/data -d postgres:17
+
+stop_db:
+	docker stop blog_db
+
+remove_db:
+	docker rm blog_db
+
+remove_db_force:
+	docker rm -f blog_db
+
+remove_storage:
+	docker volume rm blog_db_data

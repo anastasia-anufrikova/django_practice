@@ -1,3 +1,4 @@
+from django.contrib.postgres.indexes import GinIndex
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
@@ -42,6 +43,13 @@ class Post(models.Model):
         verbose_name = 'Статья'
         verbose_name_plural = 'Статьи'
         ordering = ['created_at', 'published']
+        indexes = [
+            GinIndex(
+                fields=['title', 'content'],
+                name='post_title_content_gin',
+                opclasses=['gin_trgm_ops', 'gin_trgm_ops']
+            )
+        ]
 
     def get_absolute_url(self):
         return reverse("blog:post_detail", args=[self.slug])
