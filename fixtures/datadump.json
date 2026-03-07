@@ -1,0 +1,1932 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$r8A9n9DC5flZdWL5IwN4yI$JgpzeO7l8TwJM1ASKivD94ModBcRfKqmSHzT3d5348w=",
+        "last_login": "2026-02-14T08:16:16.292Z",
+        "is_superuser": true,
+        "username": "Anastasia",
+        "first_name": "",
+        "last_name": "",
+        "email": "nastyaanufrikova1996@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-12-20T07:31:23Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$VhhDQrI5EnLWSTLvzxuTuY$DYw3ZFcNrVvaZHaGMaFs2ccV4p5qDE2mStZ1EQps3Pg=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "User1",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-13T15:12:21.040Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$0XtQuuE2dVuWGNb0OJv548$rzA/lNqGERSsE1qBxUqEN5eByypR+xnw768UQJyjiys=",
+        "last_login": "2026-02-15T15:57:11.302Z",
+        "is_superuser": false,
+        "username": "Пользователь1",
+        "first_name": "",
+        "last_name": "",
+        "email": "anastasiya.anufrikova@onetwotrip.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-14T06:50:14.998Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$csxITsswDMrir3yS5OEmCl$Iz0PZuniaZiDnQyO9DLhhpTBG+sLt3+be+G4VN+jPGg=",
+        "last_login": "2026-02-18T17:06:17Z",
+        "is_superuser": true,
+        "username": "Анастасия",
+        "first_name": "",
+        "last_name": "",
+        "email": "nastyaanufrikova@mail.ru",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-18T16:44:39Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$7fPHy6B4l4QjMUbO01gb4f$r0O6qN9/xc+1qhykMIqufblg4KPchRsfqQqSXzTsGSw=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "12",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-18T17:58:45.073Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$e8nSfyK7pGwDIubzkMinDH$t38hP9PnIARsg1YabCmCzJZXikDkqS3VVqBqw3W4mc8=",
+        "last_login": "2026-02-28T12:36:17.088Z",
+        "is_superuser": true,
+        "username": "2",
+        "first_name": "",
+        "last_name": "",
+        "email": "nastya@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-02-28T07:00:13.838Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$kMhkmQhLMrYrAiZE0HWtvU$/1yyYCsZ57cdUYGHcXkBbehUMYjMiAuXdQy7VL6aZTk=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "14",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2026-02-28T12:36:57.778Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "9ryj4iao76qcw9puome4c4dgy9q23jih",
+    "fields": {
+        "session_data": "e30:1vreMa:8daAa0ooHpb6FC_M1WCoxRTmxIT9OFd4B2A5KyX_g2I",
+        "expire_date": "2026-03-01T15:48:48.297Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "j00e4nwt9p417gry1vyufgtpz77wz8ft",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBogQGX7j0DGQZGqoYmpV0Z765NutDtf-_9l4i4rTVuvSxxyuIstDj9bgnpUdoO8h3bbZY0t3WZktwVedAur3Muz8vh_h1U7PVbYxjZqzT4oIBHDJ5gQLTOWjJkmXTwyUDR7C2iQnLJemW0A1DsWIN4fwDbQTeA:1vcrro:wQBoFWUVOZsEIDbmrw_W0ZjMP6kvB3UtI9v3_qMncGM",
+        "expire_date": "2026-01-19T21:11:56.317Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "mw9s403429ztghbzbqzoqaru4a89y64c",
+    "fields": {
+        "session_data": "e30:1vrdgn:8hl362n9RmH6rA6aI7l-KXRkULxjTcQ5NPR2HTHjfLw",
+        "expire_date": "2026-03-01T15:05:37.516Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "nmnfayzdt8g6648ns3ndu6kdaxv2mxnb",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBogQGX7j0DGQZGqoYmpV0Z765NutDtf-_9l4i4rTVuvSxxyuIstDj9bgnpUdoO8h3bbZY0t3WZktwVedAur3Muz8vh_h1U7PVbYxjZqzT4oIBHDJ5gQLTOWjJkmXTwyUDR7C2iQnLJemW0A1DsWIN4fwDbQTeA:1vWrZk:0K4pUILlxXH_MfbkWUyfELabgLMl-szHfAVe1UgDLtU",
+        "expire_date": "2026-01-03T07:40:28.743Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "o0fqxgcj2r4iay9e1lzvyzu3lkg36cf6",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBgqAWX7nsGMsyAVA0kpV0Z765NutDtf-_9lwi4rSVsPS1hZnERIE6_W0R6pLoDvmO9NUmtrssc5a7Ig3Y5NU7P6-H-HRTs5VsPRmWlKMFAo86sPI7-jMyU0DFZMhY0W3DeR3SAKmd2rCIgGaMjkHh_APgqOKk:1vrAWq:QWiRBpogou2CDEoZsTRQ9jKqd-4VJjR4241_OrNS6Hg",
+        "expire_date": "2026-02-28T07:57:24.042Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vy5frfzek11luur4l6bh7tzfabvkqs2w",
+    "fields": {
+        "session_data": ".eJxVjEEOwiAQRe_C2hBogQGX7j0DGQZGqoYmpV0Z765NutDtf-_9l4i4rTVuvSxxyuIstDj9bgnpUdoO8h3bbZY0t3WZktwVedAur3Muz8vh_h1U7PVbYxjZqzT4oIBHDJ5gQLTOWjJkmXTwyUDR7C2iQnLJemW0A1DsWIN4fwDbQTeA:1viC4i:q4vu88bfVFQvUBFUhRLONtS0j34Y_uzV2gRnaqMpz70",
+        "expire_date": "2026-02-03T13:47:16.202Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "w8iz4nk6lsm8bqsw9pbgz0qgwbr8njxp",
+    "fields": {
+        "session_data": "e30:1vrA1O:N_ykZ899FvbOVntMvfXAI6ZrY9ilT9MzXxfY0tHter8",
+        "expire_date": "2026-02-28T07:24:54.223Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "x1y78hsj6y0r6y3vltufirndh03wd5v1",
+    "fields": {
+        "session_data": ".eJxVjDsOwyAQBe9CHSFg115Imd5nQHyDkwgkY1dR7h5bcpG0b2bem1m3rcVuPS12juzKRnb53bwLz1QPEB-u3hsPra7L7Pmh8JN2PrWYXrfT_Tsorpe9hpFMFAhBIZCSwQtEIzXRoLUb0AgpQVMAlYC8xpwzKUC3Q5Oz8Yp9vprMNnA:1vwJYP:JI7YPONsXuQ_SfqTP65JNmirIg07xhXY8qVHnIA6i30",
+        "expire_date": "2026-03-14T12:36:17.098Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "y3n08gu632qabb54gyx29o61du1r3g5k",
+    "fields": {
+        "session_data": "e30:1vrdjS:gWWXwWOFI5Gj6HVY1TPDR0C_31h-Gcqu0t5vqeshXKo",
+        "expire_date": "2026-03-01T15:08:22.450Z"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 1,
+    "fields": {
+        "title": "Категория 1",
+        "slug": "category-1"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 2,
+    "fields": {
+        "title": "Категория 2",
+        "slug": "kategoriya-2"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 3,
+    "fields": {
+        "title": "Дни января",
+        "slug": "dni-yanvarya"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 4,
+    "fields": {
+        "title": "Первая тестовая категория",
+        "slug": "post-1770082409"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 5,
+    "fields": {
+        "title": "Вторая тестовая категория",
+        "slug": "post-1770128946"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 6,
+    "fields": {
+        "title": "Тест 3",
+        "slug": "post-1770130767"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 7,
+    "fields": {
+        "title": "vfgs",
+        "slug": ""
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 8,
+    "fields": {
+        "title": "Одна",
+        "slug": "post-1770448248"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 9,
+    "fields": {
+        "title": "Привет",
+        "slug": "post-1770448265"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 10,
+    "fields": {
+        "title": "Gjrf",
+        "slug": "post-1770448435"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 11,
+    "fields": {
+        "title": "Gjrfdf",
+        "slug": "post-1770448519"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 12,
+    "fields": {
+        "title": "Hello!",
+        "slug": "post-1770448967"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 13,
+    "fields": {
+        "title": "Ldf",
+        "slug": "post-1770449336"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 14,
+    "fields": {
+        "title": "fgf",
+        "slug": "post-1770449368"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 15,
+    "fields": {
+        "title": "ntcnb",
+        "slug": "post-1770501548"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 16,
+    "fields": {
+        "title": "Домашка 13",
+        "slug": "dz-13"
+    }
+},
+{
+    "model": "blog_app.category",
+    "pk": 17,
+    "fields": {
+        "title": "Домашняя работа 13.2",
+        "slug": "dz-13-2"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 8,
+    "fields": {
+        "title": "1 января",
+        "slug": "1-yanvarya",
+        "content": "1 января ассоциируется с Новым годом. В России при Петре I 1 января стали пускать салюты и ставить елки, что было новым развлечением.",
+        "author": [
+            "Anastasia"
+        ],
+        "published": true,
+        "created_at": "2026-01-05T21:15:36.245Z",
+        "updated_at": "2026-02-09T16:12:57.193Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 9,
+    "fields": {
+        "title": "2 января",
+        "slug": "2-yanvarya",
+        "content": "2 января часто ассоциируется с празднованием продолжения Нового года, а также с Днем интроверта и Днем научной фантастики.",
+        "author": [
+            "Anastasia"
+        ],
+        "published": true,
+        "created_at": "2026-01-05T21:17:55.992Z",
+        "updated_at": "2026-02-03T14:05:57.275Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 10,
+    "fields": {
+        "title": "3 январь",
+        "slug": "3-yanvarya",
+        "content": "3 января 1888 года американский предприниматель Марвин Стоун запатентовал соломинку для коктейлей из бумаги — до этого использовали ржаные соломинки, которые были не очень хороши, и это было настоящим событием, ведь теперь можно было пить коктейли без привкуса травы.",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-01-05T21:19:18.794Z",
+        "updated_at": "2026-02-25T17:53:23.762Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 11,
+    "fields": {
+        "title": "4 января",
+        "slug": "4-yanvarya",
+        "content": "4 января в истории случались как знаковые, так и забавные события: открытие самого высокого здания в мире Бурдж-Халифа, приземление марсохода «Спирит», но также есть и забавные моменты, связанные с «Настасьиным днём», когда запрещали прокалывать уши, и Всемирным днём музыкального поп-чарта — отличным поводом вспомнить хиты прошлых лет.",
+        "author": [
+            "Anastasia"
+        ],
+        "published": true,
+        "created_at": "2026-01-05T21:21:26.949Z",
+        "updated_at": "2026-01-05T21:25:03.234Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 12,
+    "fields": {
+        "title": "5 января",
+        "slug": "5-yanvarya",
+        "content": "5 января в 1731 году в Москве зажглись первые фонари, а в 1933 году началось строительство моста «Золотые ворота» (ставшего местом самоубийств), при этом в 1920-х был запатентован «чудо-мыло» Парацельса от чумы, а в 2005-м открыли карликовую планету Эрис, что запустило споры о Плутоне..",
+        "author": [
+            "Anastasia"
+        ],
+        "published": true,
+        "created_at": "2026-01-05T21:22:37.833Z",
+        "updated_at": "2026-02-03T14:21:26.350Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 13,
+    "fields": {
+        "title": "6 января",
+        "slug": "6-yanvarya",
+        "content": "6 января 1928 г. Темза вышла из берегов, затопив Лондон, а 6 января 1838 г. Сэмюэл Морзе продемонстрировал телеграф.",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-01-05T21:24:03.758Z",
+        "updated_at": "2026-01-05T21:25:16.522Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 14,
+    "fields": {
+        "title": "7 января",
+        "slug": "7-yanvarya",
+        "content": "Забавные рождественские традиции 7 января\r\nЧто нельзя делать: Нельзя злиться, ругаться, жаловаться на бедность или работать.\r\nОдежда: Только светлая и праздничная, никакого черного или старого.\r\nМусор: Не выносить, чтобы не вынести удачу.",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-01-05T21:27:03.802Z",
+        "updated_at": "2026-01-05T21:27:24.405Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 15,
+    "fields": {
+        "title": "8 января",
+        "slug": "8-yanvarya",
+        "content": "8 января отмечается шутливый «День умасливания гремлинов» – время, когда стоит почистить и обслужить технику, чтобы «задобрить» этих мифических вредителей.",
+        "author": [
+            "Anastasia"
+        ],
+        "published": true,
+        "created_at": "2026-01-05T21:28:22.423Z",
+        "updated_at": "2026-01-05T21:28:22.423Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 16,
+    "fields": {
+        "title": "9 января",
+        "slug": "9-yanvarya",
+        "content": "9 января происходило много событий: от трагического «Кровавого воскресенья» (1905), ставшего началом революции, до грандиозных технологических прорывов, как первый iPhone (2007), и курьезных случаев, например, самый короткий хоккейный матч (2010), прерванный из-за массовой драки и штрафов.",
+        "author": [
+            "Anastasia"
+        ],
+        "published": true,
+        "created_at": "2026-01-05T21:29:29.180Z",
+        "updated_at": "2026-02-20T23:29:16.452Z",
+        "views_count": 0,
+        "category": 3,
+        "image": "posts/3.jpg"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 17,
+    "fields": {
+        "title": "10 января",
+        "slug": "10",
+        "content": "10 января отмечают День горького шоколада, День благодарности комнатным растениям и День своеобразных людей, а в народном календаре — Домочадцев день, когда принято собираться за одним столом и делить домашние дела поровну, но не давать в долг.",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-01-05T21:30:43.573Z",
+        "updated_at": "2026-01-06T00:52:00.657Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 20,
+    "fields": {
+        "title": "Тестовая",
+        "slug": "testovaya",
+        "content": "Для проверки навигации",
+        "author": [
+            "Anastasia"
+        ],
+        "published": true,
+        "created_at": "2026-01-20T13:47:45.016Z",
+        "updated_at": "2026-02-20T23:12:25.695Z",
+        "views_count": 0,
+        "category": 1,
+        "image": "posts/6.jpg"
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 21,
+    "fields": {
+        "title": "Тренируемся",
+        "slug": "post-1769844220",
+        "content": "Привет",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-01-31T07:23:40.328Z",
+        "updated_at": "2026-01-31T07:23:40.328Z",
+        "views_count": 0,
+        "category": 1,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 22,
+    "fields": {
+        "title": "Тренируемся",
+        "slug": "post-1769844326",
+        "content": "Привет",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-01-31T07:25:26.927Z",
+        "updated_at": "2026-01-31T07:25:26.927Z",
+        "views_count": 0,
+        "category": 1,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 23,
+    "fields": {
+        "title": "2 попытка",
+        "slug": "post-1769844359",
+        "content": "два",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-01-31T07:25:59.085Z",
+        "updated_at": "2026-01-31T07:25:59.085Z",
+        "views_count": 0,
+        "category": 1,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 25,
+    "fields": {
+        "title": "vgv",
+        "slug": "post-1770130753",
+        "content": "fg",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-02-03T14:59:13.714Z",
+        "updated_at": "2026-02-03T14:59:13.714Z",
+        "views_count": 0,
+        "category": 5,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 26,
+    "fields": {
+        "title": "hghjg",
+        "slug": "post-1770498940",
+        "content": "nbnl",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-02-07T21:15:40.872Z",
+        "updated_at": "2026-02-07T21:15:40.872Z",
+        "views_count": 0,
+        "category": 12,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 28,
+    "fields": {
+        "title": "hghjg",
+        "slug": "post-1770498996",
+        "content": "nbnl",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-02-07T21:16:36.670Z",
+        "updated_at": "2026-02-07T21:16:36.670Z",
+        "views_count": 0,
+        "category": 12,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 29,
+    "fields": {
+        "title": "hghjg",
+        "slug": "",
+        "content": "nbnl",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-02-07T21:17:41.161Z",
+        "updated_at": "2026-02-07T21:17:41.161Z",
+        "views_count": 0,
+        "category": 12,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 30,
+    "fields": {
+        "title": "kljljl;kl;",
+        "slug": "post-1770499230",
+        "content": "j;lkl;k'",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-02-07T21:20:30.596Z",
+        "updated_at": "2026-02-07T21:20:30.596Z",
+        "views_count": 0,
+        "category": 9,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 31,
+    "fields": {
+        "title": "nlkn",
+        "slug": "post-1770501613",
+        "content": "kn;kn",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-02-07T22:00:13.808Z",
+        "updated_at": "2026-02-07T22:00:13.808Z",
+        "views_count": 0,
+        "category": 11,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 32,
+    "fields": {
+        "title": "nlkn",
+        "slug": "post-1770511930",
+        "content": "kn;kn",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-02-08T00:52:10.257Z",
+        "updated_at": "2026-02-08T00:52:10.257Z",
+        "views_count": 0,
+        "category": 11,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 33,
+    "fields": {
+        "title": "fvmfv",
+        "slug": "post-1770512110",
+        "content": "vzc",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-02-08T00:55:10.937Z",
+        "updated_at": "2026-02-08T00:55:10.937Z",
+        "views_count": 0,
+        "category": 12,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 35,
+    "fields": {
+        "title": "fvmdfd",
+        "slug": "post-1770513501",
+        "content": "vzc",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-02-08T01:18:21.705Z",
+        "updated_at": "2026-02-08T01:18:21.705Z",
+        "views_count": 0,
+        "category": 12,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 38,
+    "fields": {
+        "title": "ggkjgk",
+        "slug": "post-1770831528",
+        "content": "nnkljn",
+        "author": [
+            "Anastasia"
+        ],
+        "published": false,
+        "created_at": "2026-02-11T17:38:48.009Z",
+        "updated_at": "2026-02-11T17:38:48.009Z",
+        "views_count": 0,
+        "category": 14,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 39,
+    "fields": {
+        "title": "Урок 13",
+        "slug": "urok-13",
+        "content": "Учимся работать с API",
+        "author": [
+            "Anastasia"
+        ],
+        "published": true,
+        "created_at": "2026-02-25T17:29:08.238Z",
+        "updated_at": "2026-02-25T17:29:08.238Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 40,
+    "fields": {
+        "title": "Урок 14",
+        "slug": "urok-14",
+        "content": "Учимся работать с JWT",
+        "author": [
+            "Anastasia"
+        ],
+        "published": true,
+        "created_at": "2026-02-28T07:08:18.637Z",
+        "updated_at": "2026-02-28T07:08:18.637Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 41,
+    "fields": {
+        "title": "ДЗ 14",
+        "slug": "14",
+        "content": "Учимся работать с JWT",
+        "author": [
+            "2"
+        ],
+        "published": true,
+        "created_at": "2026-02-28T12:53:14.530Z",
+        "updated_at": "2026-02-28T12:53:14.530Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "blog_app.post",
+    "pk": 42,
+    "fields": {
+        "title": "Урок 15",
+        "slug": "15",
+        "content": "Ninja",
+        "author": [
+            "User1"
+        ],
+        "published": false,
+        "created_at": "2026-03-04T18:02:53.652Z",
+        "updated_at": "2026-03-04T18:02:53.652Z",
+        "views_count": 0,
+        "category": 3,
+        "image": ""
+    }
+},
+{
+    "model": "feedback_app.feedback",
+    "pk": 1,
+    "fields": {
+        "name": "Настя",
+        "email": "nastyaanufrikova1996@gmail.com",
+        "subject": "other",
+        "message": "Hello",
+        "created_at": "2026-02-04T17:45:45.050Z"
+    }
+},
+{
+    "model": "feedback_app.feedback",
+    "pk": 2,
+    "fields": {
+        "name": "Anastasiya Anufrikova",
+        "email": "anastasiya.anufrikova@onetwotrip.com",
+        "subject": "thanks",
+        "message": "all good",
+        "created_at": "2026-02-06T11:18:49.897Z"
+    }
+},
+{
+    "model": "feedback_app.feedback",
+    "pk": 3,
+    "fields": {
+        "name": "Anastasiya Anufrikova",
+        "email": "anastasiya.anufrikova@onetwotrip.com",
+        "subject": "thanks",
+        "message": "спасибо",
+        "created_at": "2026-02-06T11:41:26.455Z"
+    }
+},
+{
+    "model": "feedback_app.feedback",
+    "pk": 4,
+    "fields": {
+        "name": "Anastasiya Anufrikova",
+        "email": "anastasiya.anufrikova@onetwotrip.com",
+        "subject": "thanks",
+        "message": "од",
+        "created_at": "2026-02-06T11:53:24.551Z"
+    }
+},
+{
+    "model": "feedback_app.feedback",
+    "pk": 5,
+    "fields": {
+        "name": "Тестовый отзыв",
+        "email": "nastya@example.com",
+        "subject": "thanks",
+        "message": "Спасибо",
+        "created_at": "2026-03-04T18:20:52.609Z"
+    }
+},
+{
+    "model": "users_app.profile",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "Anastasia"
+        ],
+        "bio": "fff",
+        "social_link": null,
+        "avatar": "avatar/Снимок_экрана_2026-02-18_181601.jpg"
+    }
+},
+{
+    "model": "users_app.profile",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "Пользователь1"
+        ],
+        "bio": "",
+        "social_link": null,
+        "avatar": ""
+    }
+},
+{
+    "model": "users_app.profile",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "Анастасия"
+        ],
+        "bio": "fgfbsbvdv",
+        "social_link": null,
+        "avatar": "avatar/IMG_20200106_011231.jpg"
+    }
+},
+{
+    "model": "users_app.profile",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "12"
+        ],
+        "bio": "",
+        "social_link": null,
+        "avatar": ""
+    }
+},
+{
+    "model": "users_app.profile",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "2"
+        ],
+        "bio": "",
+        "social_link": null,
+        "avatar": ""
+    }
+},
+{
+    "model": "users_app.profile",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "14"
+        ],
+        "bio": "",
+        "social_link": null,
+        "avatar": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-12-20T08:05:26.288Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "Category object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-12-20T08:11:47.655Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "Category object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-12-20T08:26:52.088Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "1",
+        "object_repr": "Post object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-12-27T06:39:44.331Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "2",
+        "object_repr": "Пост 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-12-27T06:57:46.529Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "1",
+        "object_repr": "Пост 1",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-12-27T06:57:46.530Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "2",
+        "object_repr": "Пост 2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-12-27T07:09:30.183Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "3",
+        "object_repr": "Статья 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-12-27T07:09:44.932Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "4",
+        "object_repr": "Article",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-12-27T08:26:07.808Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "3",
+        "object_repr": "Статья 1",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-12-27T08:26:07.808Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "4",
+        "object_repr": "Article",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-12-27T08:30:25.751Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "5",
+        "object_repr": "Article 1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-12-27T08:30:38.817Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "6",
+        "object_repr": "Article 2",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-12-27T08:33:09.852Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "5",
+        "object_repr": "Article 1",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-12-27T08:33:09.852Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "6",
+        "object_repr": "Article 2",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-12-27T08:34:01.496Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "7",
+        "object_repr": "Привет!",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-12-27T08:34:40.846Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "7",
+        "object_repr": "Привет!",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2026-01-05T21:15:36.247Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "8",
+        "object_repr": "1 января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2026-01-05T21:17:55.993Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "9",
+        "object_repr": "2 января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2026-01-05T21:19:18.795Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "10",
+        "object_repr": "3 января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2026-01-05T21:19:24.594Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "10",
+        "object_repr": "3 января",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2026-01-05T21:20:08.843Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "8",
+        "object_repr": "1 января",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0435 \\u0441\\u0442\\u0430\\u0442\\u044c\\u0438\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2026-01-05T21:20:28.528Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "9",
+        "object_repr": "2 января",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u043e\\u0434\\u0435\\u0440\\u0436\\u0438\\u043c\\u043e\\u0435 \\u0441\\u0442\\u0430\\u0442\\u044c\\u0438\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2026-01-05T21:21:26.951Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "11",
+        "object_repr": "4 января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2026-01-05T21:22:37.834Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "12",
+        "object_repr": "5 января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2026-01-05T21:24:03.761Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "13",
+        "object_repr": "6 января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2026-01-05T21:24:35.632Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "Дни января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2026-01-05T21:24:45.106Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "8",
+        "object_repr": "1 января",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2026-01-05T21:24:50.992Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "9",
+        "object_repr": "2 января",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2026-01-05T21:24:57.088Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "10",
+        "object_repr": "3 января",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2026-01-05T21:25:03.238Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "11",
+        "object_repr": "4 января",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2026-01-05T21:25:09.678Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "12",
+        "object_repr": "5 января",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2026-01-05T21:25:16.523Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "13",
+        "object_repr": "6 января",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2026-01-05T21:27:03.803Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "14",
+        "object_repr": "7 января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2026-01-05T21:27:24.406Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "14",
+        "object_repr": "7 января",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2026-01-05T21:28:22.426Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "15",
+        "object_repr": "8 января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2026-01-05T21:29:29.181Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "16",
+        "object_repr": "9 января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2026-01-05T21:30:43.574Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "17",
+        "object_repr": "10 января",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2026-01-20T13:47:45.020Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "20",
+        "object_repr": "Тестовая",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2026-02-03T13:25:19.694Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "category"
+        ],
+        "object_id": "5",
+        "object_repr": "Дни января",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2026-02-03T14:30:50.766Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "24",
+        "object_repr": "jfkd234",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2026-02-09T16:12:57.195Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "8",
+        "object_repr": "1 января",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2026-02-09T16:13:09.951Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "27",
+        "object_repr": "hghjg",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2026-02-09T16:16:33.468Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "37",
+        "object_repr": "m..m.",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2026-02-09T16:18:22.658Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "34",
+        "object_repr": "fvmdfd",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2026-02-09T16:21:38.387Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "blog_app",
+            "post"
+        ],
+        "object_id": "36",
+        "object_repr": "fvmdfd",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0443\\u0431\\u043b\\u0438\\u043a\\u043e\\u0432\\u0430\\u043d\\u043e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2026-02-13T15:12:21.779Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "User1",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2026-02-13T15:15:32.843Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "Anastasia",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2026-02-13T15:18:51.863Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "users_app",
+            "profile"
+        ],
+        "object_id": "1",
+        "object_repr": "Anastasia",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2026-02-13T19:25:41.103Z",
+        "user": [
+            "Anastasia"
+        ],
+        "content_type": [
+            "users_app",
+            "profile"
+        ],
+        "object_id": "1",
+        "object_repr": "Anastasia",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2026-02-18T16:45:45.967Z",
+        "user": [
+            "Анастасия"
+        ],
+        "content_type": [
+            "users_app",
+            "profile"
+        ],
+        "object_id": "2",
+        "object_repr": "Anastasia",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u0432\\u0430\\u0442\\u0430\\u0440\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2026-02-18T17:06:08.575Z",
+        "user": [
+            "Анастасия"
+        ],
+        "content_type": [
+            "users_app",
+            "profile"
+        ],
+        "object_id": "4",
+        "object_repr": "1",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0411\\u0438\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f\", \"\\u0410\\u0432\\u0430\\u0442\\u0430\\u0440\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2026-02-18T17:58:46.079Z",
+        "user": [
+            "Анастасия"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "5",
+        "object_repr": "12",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2026-02-20T21:50:50.086Z",
+        "user": [
+            "Анастасия"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "Анастасия",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2026-02-28T12:36:58.486Z",
+        "user": [
+            "2"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "7",
+        "object_repr": "14",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]
