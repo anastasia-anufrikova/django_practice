@@ -4,12 +4,14 @@ from ninja import NinjaAPI
 
 from django_project.blog_app.models import Post, Category
 from django_project.feedback_app.models import Feedback
+from django_project.ninja_api.auth_routes import auth_router
 from django_project.ninja_api.schemas import PostOutSchema, PostInSchema, FeedbackOutSchema, FeedbackInSchema, \
     CategoryOutSchema, CategoryInSchema, PostSearchOutSchema
 
 from django.utils.text import slugify
 
 router = NinjaAPI(version='1.0.0', title='Ninja API blog', description='Блог на Django Ninja')
+router.add_router('/auth', auth_router)
 
 @router.get('/ping')
 def ping(request) -> dict[str, bool]:
