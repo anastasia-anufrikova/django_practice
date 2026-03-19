@@ -80,3 +80,7 @@ class LoginOutSchema(Schema):
     email: str | None = None
     id: int | None = None
     is_staff: bool | None = None
+    access_token: str | None = None
+
+class EmailPayloadSchema(Schema):
+    email: EmailStr
