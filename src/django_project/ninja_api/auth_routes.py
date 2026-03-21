@@ -1,10 +1,8 @@
-from django.conf import settings
 from django.contrib.auth import aauthenticate
 from django.contrib.auth.tokens import default_token_generator
-from django.core.mail import EmailMessage
-from django.template.loader import render_to_string
-from django.utils.encoding import force_bytes, force_str
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.encoding import force_str
+from django.utils.http import (
+    urlsafe_base64_decode)
 from ninja import Router
 from ninja.errors import HttpError
 
@@ -13,31 +11,7 @@ from django_project.ninja_api.schemas import RegisterOutSchema, RegisterInSchema
 
 from django.contrib.auth.models import User
 
-from django_project.ninja_api.utils import create_access_token
-
-
-def token_email(user):
-    uid = urlsafe_base64_encode(force_bytes(user.pk))
-    token = default_token_generator.make_token(user)
-
-    activation_url = f'http://127.0.0.1:8000/api/v2/auth/activate/{uid}/{token}'
-
-    context = {
-        "activation_url": activation_url,
-        'user': user,
-        'site_name': "Учебный блог на Django"
-    }
-    html_content = render_to_string('email/activation_email.html', context=context)
-
-    message = EmailMessage(
-        subject='Подтверждение регистрации',
-        body=html_content,
-        from_email=settings.DEFAULT_FROM_EMAIL,
-        to=[user.email]
-    )
-    message.content_subtype = 'html'
-    message.send()
-    return None
+from django_project.ninja_api.utils import create_access_token, token_email
 
 auth_router = Router(tags=['Authentication'])
 
