@@ -1,17 +1,17 @@
-from django.conf import settings
 from django.contrib.auth import aauthenticate
 from django.contrib.auth.tokens import default_token_generator
-from django.core.mail import EmailMessage
-from django.template.loader import render_to_string
-from django.utils.encoding import force_bytes, force_str
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
+from django.utils.encoding import force_str
+from django.utils.http import (
+    urlsafe_base64_decode)
 from ninja import Router
 from ninja.errors import HttpError
 
 from django_project.ninja_api.schemas import RegisterOutSchema, RegisterInSchema, ActivationOutSchema, LoginOutSchema, \
-    LoginInSchema
+    LoginInSchema, EmailPayloadSchema
 
 from django.contrib.auth.models import User
+
+from django_project.ninja_api.utils import create_access_token, token_email
 
 auth_router = Router(tags=['Authentication'])
 
@@ -28,46 +28,14 @@ def register(request, payload:RegisterInSchema) -> RegisterOutSchema:
         password=payload.password,
         is_active=False
     )
+        #return RegisterOutSchema(
+        #    message='Регистрация успешна',
+        #   username=user.username,
+        #    email=user.email,
+        #    id=user.id
+        #)
 
-    uid = urlsafe_base64_encode(force_bytes(user.pk))
-    token = default_token_generator.make_token(user)
-
-    activation_url = f'http://127.0.0.1:8000/api/v2/auth/activate/{uid}/{token}'
-
-    context = {
-        "activation_url": activation_url,
-        'user': user,
-        'site_name': "Учебный блог на Django"
-    }
-    html_content = render_to_string('email/activation_email.html', context=context)
-
-    #subject = 'Регистрация'
-    #message = f'Для регистрации пройдите по ссылке {activation_url}'
-
-    #send_mail(
-    #    subject='Регистрация',
-    #    message=f'Для регистрации пройдите по ссылке {activation_url}',
-    #    from_email=settings.DEFAULT_FROM_EMAIL,
-    #    recipient_list=[user.email],
-    #    fail_silently=False
-    #)
-
-    message = EmailMessage(
-        subject='Подтверждение регистрации',
-        body=html_content,
-        from_email=settings.DEFAULT_FROM_EMAIL,
-        to=[user.email]
-    )
-    message.content_subtype = 'html'
-    message.send()
-
-    #return RegisterOutSchema(
-    #    message='Регистрация успешна',
-    #   username=user.username,
-    #    email=user.email,
-    #    id=user.id
-    #)
-
+    token_email(user)
     return {
         'message': 'Регистрация успешна',
         'username': payload.username,
@@ -99,12 +67,25 @@ async def login(request, payload:LoginInSchema) -> LoginOutSchema:
     )
     if user is None:
         return LoginOutSchema(success=False, message='Неверный логин или пароль')
-
+    access_token =create_access_token(user.id, user.username)
     return LoginOutSchema(
         success=True,
         message='Авторизация успешна',
         username=user.username,
         email=user.email,
         id=user.id,
-        is_staff=user.is_staff
+        is_staff=user.is_staff,
+        access_token=access_token
     )
+
+@auth_router.post('/resend-activation', response=ActivationOutSchema)
+async def reactivate(request, payload: EmailPayloadSchema) -> ActivationOutSchema:
+    try:
+        user = await User.objects.aget(email=payload.email)
+    except User.DoesNotExist:
+        raise HttpError(status_code=400, message='Такого пользователя не существует')
+    if not user.is_active:
+        token_email(user)
+        return ActivationOutSchema(activated=False, message='Новая ссылка направлена')
+
+    return ActivationOutSchema(activated=True, message='Учётная запись уже активна')
