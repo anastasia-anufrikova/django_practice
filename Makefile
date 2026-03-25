@@ -53,7 +53,14 @@ restore:
 	uv run s loaddata fixtures/datadump.json
 
 create_db:
-	docker run --name blog_db -e POSTGRES_USER=myuser -e POSTGRES_PASSWORD=mypassword -e POSTGRES_DB=mydb -p 5432:5432 -v blog_db_data:/var/lib/postgresql/data -d postgres:17
+	docker run --name blog_db \
+ 	--network blog_net \
+ 	-e POSTGRES_USER=myuser \
+ 	-e POSTGRES_PASSWORD=mypassword \
+ 	-e POSTGRES_DB=mydb \
+ 	-p 5432:5432 \
+ 	-v blog_db_data:/var/lib/postgresql/data \
+ 	-d postgres:17
 
 stop_db:
 	docker stop blog_db
@@ -69,10 +76,11 @@ remove_storage:
 
 create_container:
 	docker run \
-	--name blog \
 	--network blog_net \
+	--name blog \
 	-p 8000:8000 \
 	--env-file .env \
+	-v ./src/django_project/media:/app/src/django_project/media \
 	-d blog_image
 
 create_image:
