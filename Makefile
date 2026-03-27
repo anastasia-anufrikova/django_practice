@@ -50,7 +50,7 @@ dump:
 	uv run src/django_project/manage.py dumpdata --natural-foreign --natural-primary -e contenttypes -e auth.Permission --indent 4 --output fixtures/datadump.json
 
 restore:
-	uv run s loaddata fixtures/datadump.json
+	uv run src/django_project/manage.py loaddata fixtures/datadump.json
 
 create_db:
 	docker run --name blog_db \
@@ -91,3 +91,15 @@ delete_container:
 
 in_container:
 	docker exec -it blog bash
+
+run_all: migrate restore
+	uv run src/django_project/manage.py runserver 0.0.0.0:8000
+
+compose_start:
+	docker compose up -d && docker compose logs -f
+
+compose_rebuild:
+	docker compose up -d --build
+
+compose_logs:
+	docker compose logs -f
