@@ -1,11 +1,13 @@
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
+from django.views.decorators.cache import cache_page
 from django.views.generic import TemplateView, ListView, DetailView, CreateView, UpdateView, DeleteView
 
 from django_project.blog_app.forms import PostForm, CategoryForm
 from django_project.blog_app.mixins import TitleMixin, StuffRequiredMixin
 from django_project.blog_app.models import Post, Category
 import time
+from django.utils.decorators import method_decorator
 
 
 class IndexView(TitleMixin ,TemplateView):
@@ -31,11 +33,16 @@ class PostListView(ListView):
     def get_queryset(self):
         return self.model.objects.filter(published=True)
 
+
 class PostDetailView(DetailView):
     model = Post
     template_name = "blog_app/post_detail.html"
     context_object_name = "post"
     slug_url_kwarg ="post_slug"
+
+    @method_decorator(cache_page(60))
+    def dispatch(self, *args, **kwargs):
+        return super().dispatch(*args, **kwargs)
 
 class CategoriesListView(ListView):
     model = Category
