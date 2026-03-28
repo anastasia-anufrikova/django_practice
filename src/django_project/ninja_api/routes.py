@@ -1,4 +1,5 @@
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchHeadline, SearchRank
+from django.core.cache import cache
 from django.http import HttpResponse
 from ninja import NinjaAPI
 
@@ -28,13 +29,20 @@ async def posts_list(request, search: str | None=None, category_id: int | None=N
 
     return [post async for post in qs]
 
+
 @router.get('/posts/{post_id}/', response=PostOutSchema)
 async def post_get(request, post_id:int) -> PostOutSchema | HttpResponse:
-    try:
-        post = await Post.objects.aget(pk=post_id)
-        return post
-    except Post.DoesNotExist:
-        return router.create_response(request, {'detail': 'Статья не найдена'}, status=404)
+    cache_key = f'api_post_{post_id}'
+    post = cache.get(cache_key)
+
+    if post is None:
+        try:
+            post = await Post.objects.aget(pk=post_id)
+            cache.set(cache_key, post, 300)
+        except Post.DoesNotExist:
+            return router.create_response(request, {'detail': 'Статья не найдена'}, status=404)
+
+    return post
 
 @router.post('/posts', response=PostOutSchema)
 async def create_post(request, payload: PostInSchema) -> PostOutSchema:

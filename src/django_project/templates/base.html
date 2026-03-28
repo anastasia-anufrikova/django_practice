@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="ru">
+{% load static %}
+{% load cache %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{% block title %}Django blog{% endblock %}</title>
-    {% load static %}
     <link  href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
 </head>
 <body>
@@ -26,6 +27,8 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
+                        {% cache 600 nav_categories %}
+
                         {% for category in nav_categories %}
                             <li>
                                 <a href="{% url 'blog:category_detail' category.id %}" class="dropdown-item">{{ category.title }}</a>
@@ -37,6 +40,7 @@
                                 </span>
                             </li>
                         {% endfor %}
+                        {% endcache %}
                     </ul>
                 </li>
                 <li class="nav-item">

@@ -103,3 +103,6 @@ compose_rebuild:
 
 compose_logs:
 	docker compose logs -f
+
+compose_stop:
+	docker compose down
