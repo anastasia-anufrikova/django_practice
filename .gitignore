@@ -11,3 +11,4 @@ wheels/
 .idea
 .vscode
 .env
+.env.docker

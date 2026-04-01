@@ -106,3 +106,12 @@ compose_logs:
 
 compose_stop:
 	docker compose down
+
+celery_check:
+	uv run celery -A blog_project --workdir=src/django_project inspect registered
+
+celery_run:
+	uv run celery -A blog_project --workdir=src/django_project worker -l INFO --pool=solo
+
+celery_run_docker:
+	uv run celery -A blog_project --workdir=src/django_project worker -l INFO
