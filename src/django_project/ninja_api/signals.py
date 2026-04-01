@@ -7,6 +7,8 @@ from django_project.blog_app.models import Post
 
 @receiver(post_save, sender=Post)
 def invalidate_post_cache(sender, instance, **kwargs):
+    cache_key = f'api_post_{instance.id}'
+    cache.delete(cache_key)
     try:
         cache.incr('posts_version')
     except (ValueError, TypeError):
