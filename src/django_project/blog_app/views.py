@@ -9,6 +9,8 @@ from django_project.blog_app.models import Post, Category
 import time
 from django.utils.decorators import method_decorator
 
+from django_project.blog_app.tasks import increment_views_count
+
 
 class IndexView(TitleMixin ,TemplateView):
     template_name = "blog_app/index.html"
@@ -43,6 +45,11 @@ class PostDetailView(DetailView):
     @method_decorator(cache_page(60))
     def dispatch(self, *args, **kwargs):
         return super().dispatch(*args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+        response = super().get(request, *args, **kwargs)
+        increment_views_count.delay(post_id=self.object.id)
+        return response
 
 class CategoriesListView(ListView):
     model = Category
