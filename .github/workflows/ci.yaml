@@ -45,5 +45,5 @@ jobs:
 
       - name: run tests
         run: |
-          cd src/blog_project
+          cd src/django_project
           uv run manage.py test --verbosity=2
