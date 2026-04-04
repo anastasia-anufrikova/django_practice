@@ -15,3 +15,4 @@ wheels/
 
 #folders
 src/django_project/media/
+.static_files/

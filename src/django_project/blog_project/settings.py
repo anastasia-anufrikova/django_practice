@@ -140,7 +140,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
-STATIC_ROOT = 'static'
+STATIC_ROOT = 'static_files'
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 JAZZMIN_SETTINGS = {

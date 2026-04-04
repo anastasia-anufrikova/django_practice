@@ -1,0 +1,49 @@
+name: lint and test
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+
+      - name: setup uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          python-version: 3.14
+          enable-cache: true
+
+      - name: install dependencies
+        run: uv sync --frozen
+
+      - name: run linters
+        run: uv run pre-commit run --all-files
+
+  test:
+    needs: lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+
+      - name: setup uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          python-version: 3.14
+          enable-cache: true
+
+      - name: install dependencies
+        run: uv sync --frozen
+
+      - name: create.env
+        run: cp .env.example .env
+
+      - name: run tests
+        run: |
+          cd src/blog_project
+          uv run manage.py test --verbosity=2
