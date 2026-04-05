@@ -83,7 +83,7 @@ class PostCreateView(StuffRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.slug = f"post-{int(time.time())}"
-        form.instance.author = self.request.user
+        form.instance.owner = self.request.user
         return super().form_valid(form)
 
     def get_success_url(self):
