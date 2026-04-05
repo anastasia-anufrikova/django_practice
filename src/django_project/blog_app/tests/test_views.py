@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.test import TestCase
+from django.test import TestCase, override_settings
 from django.urls import reverse
 
 from django_project.blog_app.models import Category, Post
@@ -26,10 +26,12 @@ class PostViewTest(TestCase):
         response = self.client.get(reverse('blog:post_detail', args=[self.post.slug]))
         self.assertEqual(response.status_code, 200)
 
+    @override_settings(CACHES={'default': {'BACKEND': 'django.core.cache.backends.dummy.DummyCache'}})
     def test_post_detail_template(self):
         response = self.client.get(reverse('blog:post_detail', args=[self.post.slug]))
         self.assertTemplateUsed(response, 'blog_app/post_detail.html')
 
+    @override_settings(CACHES={'default': {'BACKEND': 'django.core.cache.backends.dummy.DummyCache'}})
     def test_post_detail_context(self):
         response = self.client.get(reverse('blog:post_detail', args=[self.post.slug]))
         self.assertEqual(response.context['post'], self.post)
