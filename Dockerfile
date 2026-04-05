@@ -14,3 +14,5 @@ COPY src/django_project/__init__.py ./src/django_project/
 RUN uv sync --frozen
 
 COPY . .
+
+ENV PYTHONPATH=/app/src/django_project

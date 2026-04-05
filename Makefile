@@ -115,3 +115,17 @@ celery_run:
 
 celery_run_docker:
 	uv run celery -A blog_project --workdir=src/django_project worker -l INFO
+
+serve_win:
+	$env:PYTHONPATH="src/django_project"; uv run granian --interface asgi --host 0.0.0.0 --port 8000 --workers 2 blog_project.asgi:application
+
+serve: migrate collect_static
+	PYTHONPATH=src/django_project uv run granian \
+	--interface asgi \
+	--host 0.0.0.0 \
+	--port 8000 \
+	--workers 2 \
+	blog_project.asgi:application
+
+collect_static:
+	uv run src/django_project/manage.py collectstatic --noinput
