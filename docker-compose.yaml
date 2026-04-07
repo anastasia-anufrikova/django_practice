@@ -67,6 +67,19 @@ services:
       timeout: 3s
       retries: 3
 
+  flower:
+    build: .
+    container_name: blog_flower
+    restart: unless-stopped
+    command: uv run celery -A blog_project --workdir=src/django_project flower --port=5555
+    ports:
+      - "5555:5555"
+    env_file:
+      - .env.docker
+    depends_on:
+      - redis
+      - celery
+
 
 
 

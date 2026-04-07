@@ -114,7 +114,7 @@ celery_run:
 	uv run celery -A blog_project --workdir=src/django_project worker -l INFO --pool=solo
 
 celery_run_docker:
-	uv run celery -A blog_project --workdir=src/django_project worker -l INFO
+	uv run celery -A blog_project --workdir=src/django_project worker -l INFO -E
 
 serve_win:
 	$env:PYTHONPATH="src/django_project"; uv run granian --interface asgi --host 0.0.0.0 --port 8000 --workers 2 blog_project.asgi:application

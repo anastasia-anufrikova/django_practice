@@ -9,3 +9,11 @@ def create_user_profile(sender, instance, created, **kwargs):
         return
     if created:
         Profile.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def notify_user(sender, instance, created, **kwargs):
+    if not created:
+        return
+
+    from users_app.tasks import notify_registration
+    notify_registration.delay(user_id=instance.id)
