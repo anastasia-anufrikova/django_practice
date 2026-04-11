@@ -15,7 +15,7 @@ services:
 
 
   django:
-    build: .
+    image: ghcr.io/anastasia-anufrikova/django_practice:latest
     container_name: blog
     command: make serve
     restart: unless-stopped
@@ -37,7 +37,7 @@ services:
 
 
   celery:
-    build: .
+    image: ghcr.io/anastasia-anufrikova/django_practice:latest
     container_name: blog_celery
     command: make celery_run_docker
     restart: unless-stopped
@@ -75,7 +75,6 @@ services:
       - ./media:/media
       - caddy_data:/data
       - caddy_config:/config
-
 
 
 
