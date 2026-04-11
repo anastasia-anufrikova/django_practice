@@ -95,11 +95,11 @@ jobs:
       - name: build and push docker image
         uses: docker/build-push-action@v7
         with:
-          context: .
           push: true
           tags: ${{steps.meta.outputs.tags}}
+          labels: ${{steps.meta.outputs.labels}}
           cache-from: type=registry,ref=ghcr.io/anastasia-anufrikova/django_practice:latest
-          cache-to: type=gha,mode=max
+          cache-to: type=inline
 
   deploy:
     needs: build-and-push
