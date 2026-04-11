@@ -98,7 +98,7 @@ jobs:
           context: .
           push: true
           tags: ${{steps.meta.outputs.tags}}
-          cache-from: type=gha
+          cache-from: type=registry,ref=ghcr.io/anastasia-anufrikova/django_practice:latest
           cache-to: type=gha,mode=max
 
   deploy:
